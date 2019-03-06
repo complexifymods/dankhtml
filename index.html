@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Layout &mdash; Right Menu</title>
+		<style type="text/css">
+		
+			body{
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+			
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+			
+			#nav {
+				float: left;
+				width: 230px;
+				margin-left: -230px;
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				background: #eee;
+			}
+			
+			#wrapper {
+				overflow: hidden;
+			}
+			
+			#content {
+				margin-right: 230px; /* Same as 'nav' width */
+			}
+			
+			.innertube{
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
+			
+			p {
+				color: #555;
+			}
+	
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			nav ul a {
+				color: darkgreen;
+				text-decoration: none;
+			}
+	
+		</style>
+		<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+  alert("enabled");
+<a href="#"></a>
+  } else {
+alert("disabled");
+     text.style.display = "none";
+  }
+}
+</script>
+
+	
+	
+	</head>
+	
+	<body>
+		<div id="wrapper">
+		
+			<main>
+				<div id="content">
+					<div class="innertube">
+					
+					</div>
+				</div>
+			</main>
+			
+			<nav id="nav">
+				<div class="innertube">
+					<h3>Combat</h3>
+					<ul>
+					 <li>
+                  <a>
+			<label class="container">
+  <input type="checkbox" id="fly" onclick="changeHash('fly')">
+  <span class="checkmark">Fly</span>
+</label></a>
+</li>
+                <li>
+                  <a>
+	<label class="container">
+  <input type="checkbox" id="Godmode" onclick="changeHash('Godmode')">
+  <span class="checkmark">Godmode</span>
+</label></a>
+
+			
+					</ul>
+					<h3>Movement</h3>
+					<ul>
+					
+					</ul>
+					<h3>Player</h3>
+					<ul>
+
+					</ul>
+				</div>
+			</nav>
+			
+		</div>
+	</body>
+</html>
+<script>
+function changeHash(idSwitch) {
+  // Get the checkbox
+  var checkBox = document.getElementById(idSwitch);
+  if (checkBox.checked){
+   window.location.hash = '#'+idSwitch+'On';
+  } else {
+    window.location.hash = '#'+idSwitch+'Off';
+  }
+}
+    function changeHashPot(idSwitch) {
+  // Get the checkbox
+  var checkBox = document.getElementById(idSwitch);
+  if (checkBox.checked){
+   window.location.hash = '#'+idSwitch+'On#'+rangeAmp.value+'#'+rangeDur.value;
+  } else {
+    window.location.hash = '#'+idSwitch+'Off';
+  }
+}
+
+    function hashLink(idSwitch) {
+   window.location.hash = '#'+idSwitch;
+   setTimeout(hashLink, 1500);
+   window.location.hash = '#';
+}
+</script>
